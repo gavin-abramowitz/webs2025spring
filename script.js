@@ -7,4 +7,11 @@ function showFeatured(element) {
     document.getElementById("featured-description").textContent = description;
     document.getElementById("featured-image").src = imageSrc;
   }
+
   
+  function handleKeyDown(event, element) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      showFeatured(element);
+    }
+  }
